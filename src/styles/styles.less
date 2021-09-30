@@ -1,0 +1,175 @@
+@import (reference) "./tokens.less";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+}
+
+.backdrop {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.scrollarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.maskblock {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+
+p {
+  font-size: 1.125em;
+}
+
+.blockwrapper {
+  box-sizing: border-box;
+  padding: 2.25em;
+}
+
+.chunk {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 2.25em;
+  width: 90%;
+  p {
+    background: rgba(28, 28, 28, 0.8);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 4.15rem 0 0 -1em;
+    padding: 1.5em 1em;
+    img {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+.block {
+  width: 100%;
+  height: 100vh;
+  &:nth-child(2){
+    background:rgba(0,0,0,.5);
+  }
+  &:nth-child(3){
+    background:rgba(0,0,0,1);
+  }
+  &:nth-child(5){
+    background:rgb(2, 201, 181);
+  }
+
+}
+
+.nameheader {
+  background:url(../../resources/images/nci-logo-white.png) no-repeat;
+  background-size: 85% 90%;
+  width: 590px;
+  height:56px;
+  font-size: 4.5em;
+  margin: -1em 0 0 -0.05em;
+  text-shadow: 2px 5px 8px rgba(33, 35, 40, 0.6);
+  text-indent:-99999px;
+}
+
+.namesubheader {
+  font-size: 1.35em;
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 2px 4px 9px rgba(33, 35, 40, 0.6);
+}
+
+.sectionheader {
+  font-size: 1.25em;
+  font-weight: 700;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgb(50, 48, 50) 0%,
+  //   rgb(126, 136, 148) 68%,
+  //   rgb(226, 229, 247) 100%
+  // );
+  background: rgba(0,0,0,.4);
+  //background: rgba(28, 28, 28, 0.8);
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0.35em 1.65em 0.35em 2em;
+  margin-left: -2em;
+}
+
+.dotNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  z-index: 2;
+  display: none;
+}
+
+.dotMenu {
+  padding: 5px;
+  margin: 0px;
+  & > li {
+    list-style-type: none;
+
+    margin: 0px;
+    padding: 4px;
+  }
+}
+
+.dots {
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
+  display: block;
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  transition: background 600ms ease-in-out;
+  &:hover {
+    background: rgba(160, 160, 160, 0.5);
+  }
+  &.active {
+    background: rgb(204, 204, 204);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .dotNav {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .dotNav {
+    display: block;
+  }
+  .dots {
+    width: 30px;
+    height: 30px;
+  }
+}
